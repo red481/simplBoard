@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.board.controller.MainControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-11-07T08:26:20" hostname="RYUJY" time="0.599">
+  <properties/>
+  <testcase name="checkPosts()" classname="com.example.board.controller.MainControllerTest" time="0.58"/>
+  <testcase name="enrollPost()" classname="com.example.board.controller.MainControllerTest" time="0.018"/>
+  <system-out><![CDATA[17:26:17.626 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.board.controller.MainControllerTest]: MainControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:26:17.701 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.board.BoardApplication for test class com.example.board.controller.MainControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2023-11-07T17:26:17.986+09:00  INFO 20236 --- [    Test worker] c.e.board.controller.MainControllerTest  : Starting MainControllerTest using Java 17.0.8 with PID 20236 (started by otuu1 in C:\Users\otuu1\Downloads\board)
+2023-11-07T17:26:17.987+09:00  INFO 20236 --- [    Test worker] c.e.board.controller.MainControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2023-11-07T17:26:18.353+09:00  INFO 20236 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-07T17:26:18.394+09:00  INFO 20236 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2023-11-07T17:26:18.646+09:00  INFO 20236 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-07T17:26:18.697+09:00  INFO 20236 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-07T17:26:18.700+09:00  INFO 20236 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@2fd9fb34
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@2fd9fb34
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@2fd9fb34
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@1595d2b2
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@1595d2b2
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@20349058
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@20349058
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@6cbb7a7d
+2023-11-07T17:26:18.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@6cbb7a7d
+2023-11-07T17:26:18.781+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@cdb3c85
+2023-11-07T17:26:18.781+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@cdb3c85
+2023-11-07T17:26:18.781+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@cdb3c85
+2023-11-07T17:26:18.781+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@37606fee
+2023-11-07T17:26:18.781+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@37606fee
+2023-11-07T17:26:18.781+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@37606fee
+2023-11-07T17:26:18.781+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@51e7589f
+2023-11-07T17:26:18.781+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@51e7589f
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@65cc5252
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@42c12b3e
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@42c12b3e
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@2dbfa972
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@46f73ffa
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@41aebbb4
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@41aebbb4
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@41aebbb4
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@afde064
+2023-11-07T17:26:18.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@afde064
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@afde064
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@5a592c70
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@5a592c70
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@5a592c70
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@252ec02e
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@252ec02e
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@252ec02e
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@11e9ac24
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@11e9ac24
+2023-11-07T17:26:18.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@11e9ac24
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@74f280bd
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@74f280bd
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@675b18ff
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@675b18ff
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@34279b8a
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@34279b8a
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@34279b8a
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@687389a6
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@8641b7d
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@8641b7d
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@37c7766e
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@3fb450d7
+2023-11-07T17:26:18.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@3fb450d7
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@3fb450d7
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@4b7ed03e
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@636985df
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@6f91fbda
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@723e3c17
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@723e3c17
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@4ffced4e
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@4ffced4e
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@6094de13
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@bbb6f0
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@3e6ec74
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@2bd8f7db
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@6d7ad0f5
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@30abf79c
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@49a38b1
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@49a38b1
+2023-11-07T17:26:18.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@681061d6
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@681061d6
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@53d6e959
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@53d6e959
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@3caee3a8
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@3caee3a8
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@69a40b3c
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@69a40b3c
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@251c90f
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@6629643d
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@2dd178f3
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@2dd178f3
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@64656b9e
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@6870cfac
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@45554613
+2023-11-07T17:26:18.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@63e5b8aa
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@63e5b8aa
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@2c9306d3
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@4270b142
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@2dfa02c1
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@2dfa02c1
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@6314df3c
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@6314df3c
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@5785e813
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@5785e813
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@5785e813
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@10b8b900
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@10b8b900
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@10b8b900
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@6d294ddc
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@2801827a
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@50bc3219
+2023-11-07T17:26:18.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@50bc3219
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@599f1b7
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@599f1b7
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@599f1b7
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@22791b75
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@64f4f12
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@37d28938
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@37d28938
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@7d0cd23c
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@7d0cd23c
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@7d0cd23c
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@17c4dc5b
+2023-11-07T17:26:18.788+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@17c4dc5b
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@6b0f266e
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@6b0f266e
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@4837f97e
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@4837f97e
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@53314f76
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@53314f76
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@62a6674f
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@62a6674f
+2023-11-07T17:26:18.789+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@70881123
+2023-11-07T17:26:18.792+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@4aaecabd
+2023-11-07T17:26:18.793+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@4aaecabd
+2023-11-07T17:26:18.793+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@3b4ef59f
+2023-11-07T17:26:18.793+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@22cb3d59
+2023-11-07T17:26:18.794+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@33e4b9c4
+2023-11-07T17:26:18.794+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@5cff729b
+2023-11-07T17:26:18.794+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@10d18696
+2023-11-07T17:26:18.794+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@6b8b5020
+2023-11-07T17:26:18.794+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@7d37ee0c
+2023-11-07T17:26:18.794+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@5a7b309b
+2023-11-07T17:26:18.794+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@4602f874
+2023-11-07T17:26:18.913+09:00  INFO 20236 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-07T17:26:18.932+09:00  INFO 20236 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-07T17:26:18.989+09:00  INFO 20236 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://localhost/~/board user=SA
+2023-11-07T17:26:18.990+09:00  INFO 20236 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-07T17:26:19.036+09:00 DEBUG 20236 --- [    Test worker] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2023-11-07T17:26:19.036+09:00 DEBUG 20236 --- [    Test worker] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2023-11-07T17:26:19.036+09:00 DEBUG 20236 --- [    Test worker] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2023-11-07T17:26:19.038+09:00 DEBUG 20236 --- [    Test worker] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2023-11-07T17:26:19.038+09:00 DEBUG 20236 --- [    Test worker] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2023-11-07T17:26:19.041+09:00 DEBUG 20236 --- [    Test worker] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2023-11-07T17:26:19.045+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,2)
+2023-11-07T17:26:19.045+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,2)
+2023-11-07T17:26:19.048+09:00 DEBUG 20236 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5d27b4c1] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@50df37eb]
+2023-11-07T17:26:19.610+09:00  INFO 20236 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-07T17:26:19.610+09:00 DEBUG 20236 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5d27b4c1] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@6d946eee]
+2023-11-07T17:26:19.620+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists post cascade 
+2023-11-07T17:26:19.623+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists reply cascade 
+2023-11-07T17:26:19.627+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    create table post (
+        entity_state tinyint check (entity_state between 0 and 1),
+        created_date timestamp(6),
+        modified_date timestamp(6),
+        post_id bigint generated by default as identity,
+        content varchar(10000),
+        author varchar(255),
+        title varchar(255),
+        primary key (post_id)
+    )
+2023-11-07T17:26:19.627+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    create table reply (
+        entity_state tinyint check (entity_state between 0 and 1),
+        created_date timestamp(6),
+        post_id bigint,
+        reply_id bigint generated by default as identity,
+        content varchar(500),
+        author varchar(255),
+        primary key (reply_id)
+    )
+2023-11-07T17:26:19.629+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists reply 
+       add constraint FKnpyg5e6pqr2v1y4y6pacte11q 
+       foreign key (post_id) 
+       references post
+2023-11-07T17:26:19.631+09:00 TRACE 20236 --- [    Test worker] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@6d946eee] for TypeConfiguration
+2023-11-07T17:26:19.632+09:00  INFO 20236 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-07T17:26:19.952+09:00  WARN 20236 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-07T17:26:20.181+09:00  INFO 20236 --- [    Test worker] c.e.board.controller.MainControllerTest  : Started MainControllerTest in 2.37 seconds (process running for 3.192)
+2023-11-07T17:26:20.570+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.588+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.589+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.590+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.591+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.591+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.592+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.593+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.594+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.594+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.689+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.697+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.731+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.733+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.735+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.737+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.742+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.743+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.745+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.746+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.748+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.749+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.751+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.753+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.754+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.756+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.757+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.758+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.760+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.761+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.762+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.764+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.765+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>? 
+    order by
+        p1_0.created_date desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2023-11-07T17:26:20.767+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        count(p1_0.post_id) 
+    from
+        post p1_0 
+    where
+        p1_0.entity_state<>?
+2023-11-07T17:26:20.778+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.779+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.780+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.782+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.783+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.784+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.785+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.786+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.787+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (author,content,created_date,entity_state,modified_date,title,post_id) 
+    values
+        (?,?,?,?,?,?,default)
+2023-11-07T17:26:20.792+09:00 DEBUG 20236 --- [    Test worker] org.hibernate.SQL                        : 
+    select
+        p1_0.post_id,
+        p1_0.author,
+        p1_0.content,
+        p1_0.created_date,
+        p1_0.entity_state,
+        p1_0.modified_date,
+        p1_0.title 
+    from
+        post p1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
